@@ -7,21 +7,18 @@ export const getProductController = async (req, res) => {
         const products = await Product.find();
         res.status(200).send(products);
 
-    } catch(error) {
+    } catch (error) {
         console.log(error);
     }
 }
 
 //for add
 export const addProductController = async (req, res) => {
-
     try {
-
         const newProducts = new Product(req.body);
         await newProducts.save();
         res.status(200).send("Products Created Successfully!");
-
-    } catch(error) {
+    } catch (error) {
         console.log(error);
     }
 
@@ -31,9 +28,9 @@ export const addProductController = async (req, res) => {
 export const updateProductController = async (req, res) => {
     try {
 
-        await Product.findOneAndUpdate({_id: req.body.productId}, req.body, {new: true})
+        await Product.findOneAndUpdate({ _id: req.body.productId }, req.body, { new: true })
         res.status(201).json("Product Updated!");
-    } catch(error) {
+    } catch (error) {
         res.status(400).send(error);
         console.log(error);
     }
@@ -43,9 +40,9 @@ export const updateProductController = async (req, res) => {
 export const deleteProductController = async (req, res) => {
     try {
 
-        await Product.findOneAndDelete({_id: req.body.productId})
+        await Product.findOneAndDelete({ _id: req.body.productId })
         res.status(200).json("Product Deleted!");
-    } catch(error) {
+    } catch (error) {
         res.status(400).send(error);
         console.log(error);
     }

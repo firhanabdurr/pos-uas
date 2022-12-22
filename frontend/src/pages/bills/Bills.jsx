@@ -96,8 +96,8 @@ const Bills = () => {
           <div className="card" ref={componentRef}>
             <div className="cardHeader">
               <h2 className="logo">POS</h2>
-              <span>Number: <b>+381/0000000</b></span>
-              <span>Address: <b>34000 Kragujevac, Serbia</b></span>
+              <span>Email: <b>kelompok5@uingd.ac.id</b></span>
+              <span>Address: <b>UIN SGD, Bandung</b></span>
             </div>
             <div className="cardBody">
               <div className="group">
@@ -118,7 +118,7 @@ const Bills = () => {
               </div>
               <div className="group">
                 <span>Total Amount:</span>
-                <span><b>${selectedBill.totalAmount}</b></span>
+                <span><b>Rp{selectedBill.totalAmount}</b></span>
               </div>
             </div>
             <div className="cardFooter">
@@ -136,7 +136,7 @@ const Bills = () => {
                     </div>
                     <div className="group">
                       <span>Price:</span>
-                      <span><b>${product.price}</b></span>
+                      <span><b>Rp{product.price}</b></span>
                     </div>
                   </div>
                 </>
@@ -144,7 +144,7 @@ const Bills = () => {
               <div className="footerCardTotal">
                 <div className="group">
                   <h3>Total:</h3>
-                  <h3><b>${selectedBill.totalAmount}</b></h3>
+                  <h3><b>Rp{selectedBill.totalAmount}</b></h3>
                 </div>
               </div>
               <div className="footerThanks">
